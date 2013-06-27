@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery lightContentBox Plugin</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+        body {
+            font-family: 'Open Sans', sans-serif;
+            position: relative;
+            overflow-y: scroll;
+            margin: 0;
+            padding: 0;
+            font-size: 0.8em;
+        }
+        #wrapper {
+            width: 980px;
+            padding: 20px;
+            position: relative;
+            margin: 0 auto;
+            background: #EEE;
+            box-shadow: 0 0 0 1px #EAEAEA;
+        }
+        a {
+            color: #009AC0;
+            text-decoration: none;
+            text-shadow: 0 0 2px #CECECE;
+        }
+        li {
+            list-style-type: decimal;
+        }
+        p {
+            margin: 5px 0;
+        }
+        h2, h3 {
+            margin-top: 0;
+        }
+        .demobox {
+            border: 1px solid #DDD;
+            padding: 10px;
+            background: #FFF;
+            border-radius: 5px;
+            margin:10px 0 0;
+        }
+        .demobox .example, .demobox .code {
+            border: 1px solid #EBEBEB;
+            padding: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .demobox .example {
+            border-radius: 5px 5px 0 0;
+        }
+        .demobox .code {
+            border-radius: 0 0 5px 5px;
+            border-bottom-color: #DDD;
+        }
+        .demobox .example:before {
+            content: 'Example';
+            border-radius: 5px 5px 0 0;
+        }
+        .demobox .code:before {
+            content: 'Code';
+        }
+        .demobox .example:before, .demobox .code:before {
+            margin: -10px -10px 0 -10px;
+            border-top: 1px solid #DDD;
+            display: block;
+            font-weight: bold;
+            padding: 5px 10px;
+            background-color: #CECECE;
+            background-image: -moz-linear-gradient(#E7E7E7, #CECECE);
+            background-image: -webkit-linear-gradient(#E7E7E7, #CECECE);
+            background-image: linear-gradient(#E7E7E7, #CECECE);
+            border-bottom: 1px solid #DDD;
+        }
+        pre {
+            font-size: 10pt;
+            background: #333;
+            color: #FFF;
+            border-radius: 5px;
+            box-shadow: 0 0 4px 0 #000;
+            padding: 15px;
+        }
+        .point {
+            color: #009AC0;
+        }
+        .half {
+            width: 48%;
+            float: left;
+            margin: 10px 1%;
+        }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lightContentBox.jquery.js?0.0.1alpha"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div class="demobox">
+        <h1>jQuery lightContentBox Plugin</h1>
+        <ul>
+            <li><a href="#test">Test</a></li>
+        </ul>
+    </div>
+    <div class="demobox" id="test">
+        <h2>Test</h2>
+        <div class="example">
+            <p><a class="lightContentBox">Test link</a></p>
+        </div>
+        <div class="code">
+            <div class="half">
+                ...1
+            </div>
+            <div class="half">
+                ...2
+            </div>
+        </div>
+        <script type="text/javascript">
+            (function($){
+                $.gw2tooltip('.lightContentBox');
+            })(jQuery);
+        </script>
+    </div>
+</div>
+</body>
+</html>
